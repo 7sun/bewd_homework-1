@@ -1,5 +1,5 @@
 class HackController < ApplicationController
-
+skip_before_filter :verify_authenticity_token 
 	def home
 
 	end
@@ -9,12 +9,11 @@ class HackController < ApplicationController
 	end
 
 	def mainframe
+			@system_code = 3333
+
+			@user_guess = params['user_code'].to_i
 			
-			@user_guess = params['user_code']
-
-			if @user_guess == 1234
-
-			else 
+			if @user_guess != @system_code
 				redirect_to '/failure'
 			end
 	end
