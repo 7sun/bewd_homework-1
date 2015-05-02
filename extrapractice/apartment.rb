@@ -21,9 +21,9 @@ if (monthly_income / 3) >= rent
 			puts "How many bathrooms does it have?"
 			bathrooms = gets.chomp.to_i
 			
-			if (bedrooms.to_f / bathrooms.to_f) > 1.5
+			if bathrooms.to_f * 1.5 >=  bedrooms.to_f
 				puts "This seems like a great apartment! You should get it."
-		
+				
 			else 
 				puts "This is not a good apartment. Don't get it."
 			end
