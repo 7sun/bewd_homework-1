@@ -1,0 +1,27 @@
+<h1> Here are all your cars, you Billionare jerk </h2>
+
+<% if @cars == 0 %>
+	<h1> There are no cars present. </h1>
+<% end %>
+
+<table border = 2 >
+	<tr> 
+		<td colspan = "5" align = "center"> <b> These are all your cars. </b> </td>
+	</tr>
+	<tr>
+		<td align = "center"><b> Make </b></td>
+		<td align = "center"><b> Model </b></td>
+		<td align = "center"><b> Year </b></td>
+		<td align = "center"><b> Color </b></td>
+		<td align = "center"><b> Nickname </b></td>
+	</tr>
+<% @cars.each do |car| %>
+	<tr>
+	<td><%= car.make %></td>
+	<td><%= car.model %></td>
+	<td><%= car.year %></td>
+	<td><%= car.color %></td>
+	<td><%= car.nickname %></td>
+	</tr>
+<% end %>
+</table>

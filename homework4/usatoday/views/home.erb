@@ -1,0 +1,10 @@
+require 'HTTParty'
+
+mash = HTTParty.get('http://mashable.com/stories.json')
+parsed = mash.parsed_response
+
+@bestsellers.each_with_index do |book_hash, index|
+	puts book_hash['Title']	
+	puts book_hash['Author']
+	puts book_hash['BriefDescription']
+end
