@@ -1,0 +1,14 @@
+<h1> Add a Dog to the Tracker </h1>
+
+<%= form_for @dog do |f| %>
+	Name
+	<%= f.text_field :name %> <br>
+	Age
+	<%= f.text_field :age %> <br>
+	Color
+	<%= f.text_field :color %> <br>
+	Size
+	<%= f.text_field :size %> <br>
+
+	<%= f.submit "Add Dog" %>
+<% end %>

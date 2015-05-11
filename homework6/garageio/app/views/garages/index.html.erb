@@ -17,11 +17,14 @@
 	</tr>
 <% @cars.each do |car| %>
 	<tr>
+	<td><a href = "/<%=car.id%>"> <%= car.nickname %> </a></td>
 	<td><%= car.make %></td>
 	<td><%= car.model %></td>
 	<td><%= car.year %></td>
 	<td><%= car.color %></td>
-	<td><%= car.nickname %></td>
+	
 	</tr>
 <% end %>
 </table>
+<br>
+<a href = "/new"> Add a new car </a>

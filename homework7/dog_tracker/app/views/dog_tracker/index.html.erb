@@ -1,0 +1,13 @@
+<h1> This is the Dog Tracker </h1>
+
+<h3>All The Dogs</h3>
+
+<ul>
+<% @dogs.each do |d| %>
+  <li><a href = "/<%=d.id%>"><%= d.name %></a>, age <em><%= d.age %></em> | <small><%= d.color %> | <%= d.size %> </small></li>
+<% end %>
+</ul>
+<br>
+<a href = "/new"> Add a new dog </a>
+<br>
+<a href="/">return home</a>

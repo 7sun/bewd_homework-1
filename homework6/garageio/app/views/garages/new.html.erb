@@ -1,0 +1,16 @@
+<h1> ANOTHER car, you billionaire jerk? Add it here. </h1>
+
+<%= form_for @car do |f| %>
+	Make
+	<%= f.text_field :make %> <br>
+	Model
+	<%= f.text_field :model %> <br>
+	Year
+	<%= f.text_field :year %> <br>
+	Color
+	<%= f.text_field :color %> <br>
+	Nickname
+	<%= f.text_field :nickname %> <br>
+
+	<%= f.submit "Add Car" %>
+	<% end %>
